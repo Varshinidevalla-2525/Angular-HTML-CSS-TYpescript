@@ -1,0 +1,28 @@
+
+<ul>
+  <li><a routerLinkActive #addClientActive='routerLinkActive' routerLink='/add'>Add</a>
+  </li>
+  <li><a routerLinkActive #editClientActive='routerLinkActive' routerLink='/edit'>EDIT</a>
+  </li>
+  <li><a routerLinkActive #dashBoardClientActive='routerLinkActive' routerLink='/display'>Display</a>
+  </li>
+</ul>
+<br>
+<div>
+  <table>
+    <tr>
+      <td></td>
+      <td>
+        <div *ngIf="addClientActive.isActive">
+          <app-form></app-form>
+        </div>
+        <div *ngIf="editClientActive.isActive">
+          <app-edit></app-edit>
+        </div>
+        <div *ngIf="dashBoardClientActive.isActive">
+          <app-display></app-display>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>

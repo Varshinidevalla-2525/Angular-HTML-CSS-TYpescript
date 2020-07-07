@@ -1,0 +1,39 @@
+<br>
+
+<table>
+  <br>
+
+  <table>
+  <li *ngFor="let item of clientValues">
+    <tr>
+      <label>
+        <th>Select</th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>Country</th>
+      </label>
+    </tr>
+    <tr>
+      <td><input id='checkBox' type="checkbox" [checked]='edit==item.clientID' name='box' (change)="edit=item.clientID;disVal=-1;"
+        [disabled]='disVal==-1'>
+      </td>
+      <td><input id='{{item.clientID}}ID' type="number" value="{{item.clientID}}" [disabled]='edit!=item.clientID'></td>
+      <td><input id='{{item.clientID}}Name' type="text" value="{{item.clientName}}" [disabled]='edit!=item.clientID'></td>
+      <td><input id='{{item.clientID}}Address' type="text" value="{{item.clientAddress}}" [disabled]='edit!=item.clientID'></td>
+      <td><input id='{{item.clientID}}City' type="text" value="{{item.clientCity}}" [disabled]='edit!=item.clientID'></td>
+      <td><input id='{{item.clientID}}Country' type="text" value="{{item.clientCountry}}" [disabled]='edit!=item.clientID'></td>
+    </tr>
+        <br>
+        <hr>
+        <br>
+  </li>
+  <p>
+    <button (click)="update(edit);edit=-1;disVal=0;">Submit</button>
+  </p>
+  </table>
+  
+  
+</table>
+

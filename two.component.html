@@ -1,0 +1,22 @@
+<br>
+<table>
+  <tr>
+    <label>
+    <th>NAME</th>
+    <th>ID</th>
+    <th>ADDRESS</th>
+    <th>CITY</th>
+    <th>COUNTRY</th>
+  </label>
+  </tr>
+  <li *ngFor="let item of clientValues">
+    <tr><label>
+      <td>{{item.clientName}}</td>
+      <td>{{item.clientID}}</td>
+      <td>{{item.clientAddress}}</td>
+      <td>{{item.clientCity}}</td>
+      <td>{{item.clientCountry}}</td>
+    </label>
+    </tr>
+  </li>
+</table>
